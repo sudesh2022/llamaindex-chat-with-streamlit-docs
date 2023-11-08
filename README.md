@@ -3,7 +3,7 @@
 Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the content of the Streamlit docs (or your own data).
 
 ## Overview of the App
-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
+
 
 <img src="app.png" width="75%">
 
