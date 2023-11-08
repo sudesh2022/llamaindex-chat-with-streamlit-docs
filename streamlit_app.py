@@ -5,7 +5,7 @@ import openai
 from llama_index import SimpleDirectoryReader
 
 st.set_page_config(page_title="This Chat is powered by IBM watsonx", page_icon="IBM", layout="centered", initial_sidebar_state="auto", menu_items=None)
-openai.api_key = st.secrets.openai_key
+openai.api_key = st.secrets["openai.api_key"]
 #openai.api_key = "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"
 bam_api_key="pak-L4W1dYqalPWtiFeLM1EkTRKqSQ-vRbFl8mAAfnWC8fc"
 st.title("Chat with the Docs powered by IBM Watsonx.ai 💬🦙")
