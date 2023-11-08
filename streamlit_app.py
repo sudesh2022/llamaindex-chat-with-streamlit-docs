@@ -5,6 +5,26 @@ import openai
 from llama_index import SimpleDirectoryReader
 
 st.set_page_config(page_title="This Chat is powered by IBM watsonx", page_icon="IBM", layout="centered", initial_sidebar_state="auto", menu_items=None)
+# Add custom CSS to hide the GitHub icon
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(
+    """
+    <style>
+    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 openai.api_key = st.secrets["API_KEY"]
 #openai.api_key = "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"
 bam_api_key="pak-L4W1dYqalPWtiFeLM1EkTRKqSQ-vRbFl8mAAfnWC8fc"
