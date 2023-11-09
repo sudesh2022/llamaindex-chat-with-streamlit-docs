@@ -4,13 +4,26 @@ from llama_index.llms import OpenAI
 import openai
 from llama_index import SimpleDirectoryReader
 
-st.set_page_config(page_title="This Chat is powered by IBM watsonx", page_icon="IBM", layout="centered", initial_sidebar_state="auto", menu_items=None)
+#st.set_page_config(page_title="This Chat is powered by IBM watsonx", page_icon="IBM", layout="centered", initial_sidebar_state="auto", menu_items=None)
 # Add custom CSS to hide the GitHub icon
 
 openai.api_key = st.secrets.API_KEY
-bam_api_key="pak-L4W1dYqalPWtiFeLM1EkTRKqSQ-vRbFl8mAAfnWC8fc"
+st.set_page_config(page_title="IBM Application", layout="centered")
+
+st.markdown("""
+    <style>
+        .reportview-container {
+            margin-top: -2em;
+        }
+        #MainMenu {visibility: hidden;}
+        .stDeployButton {display:none;}
+        footer {visibility: hidden;}
+        #stDecoration {display:none;}
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("Chat with the Docs powered by IBM Watsonx.ai 💬🦙")
-         
+       
 if "messages" not in st.session_state.keys(): # Initialize the chat messages history
     st.session_state.messages = [
         {"role": "assistant", "content": "Ask me a question about Sudesh, Anthony and Arvind Krishna! For now you can ask about where they work, what they studied, experience"}
