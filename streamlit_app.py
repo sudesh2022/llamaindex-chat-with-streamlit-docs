@@ -26,7 +26,7 @@ st.title("Chat with the Docs powered by IBM Watsonx.ai 💬🦙")
        
 if "messages" not in st.session_state.keys(): # Initialize the chat messages history
     st.session_state.messages = [
-        {"role": "assistant", "content": "Ask me a question about Sudesh, Anthony and Arvind Krishna! For now you can ask about where they work, what they studied, experience"}
+        {"role": "assistant", "content": "Ask me a question about Sudesh, Anthony , Rambabu and Arvind Krishna! For now you can ask about where they work, what they studied, experience"}
     ]
 
 @st.cache_resource(show_spinner=False)
